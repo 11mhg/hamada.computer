@@ -19,10 +19,12 @@ async function main(){
   app.use(bodyParser.json());
 
 
-  app.get('/backend-alive', function(req, res){
- 
-    res.send('hello,world!');
+  app.get('/api/backend-alive', function(req, res){
+    res.send('hello,world!\n');
   });
+
+
+  app.use('/api/mail', require('./routes/mail') );
 
 
   app.listen(settings.server.port, (err)=>{

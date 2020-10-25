@@ -1,4 +1,4 @@
-const settings = require('./config.js').conf;
+const settings = require('../config.js').conf;
 const express = require('express');
 const router = express.Router();
 const nodemailer=require('nodemailer');
@@ -17,7 +17,6 @@ var defaultMailOptions = {
 async function sendMail( mailOptions ){
   var defaultObj = Object.assign({}, defaultMailOptions);
   const optsToSend = Object.assign( defaultObj, mailOptions );
-  
   await new Promise((resolve, reject)=>{
     transporter.sendMail( optsToSend, function(error, info){
       if (error){
@@ -35,5 +34,11 @@ async function sendMail( mailOptions ){
 
 
 router.post('/', async function(request, reply){
+  console.log(request.body);
 
+
+  reply.send(200);
 });
+
+
+module.exports = router;
