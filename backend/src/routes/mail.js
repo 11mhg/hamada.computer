@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport(
 
 var defaultMailOptions = {
   from: 'hamada.computer.site@gmail.com',
-  to: 'gasmallahmohammed@gmail.com',
+  to: 'hamada.computer.site@gmail.com',
   subject: 'Empty',
   text: ''
 };
@@ -34,9 +34,7 @@ async function sendMail( mailOptions ){
 
 
 router.post('/', async function(request, reply){
-  console.log(request.body);
-
-
+  sendMail( request.body );
   reply.send(200);
 });
 

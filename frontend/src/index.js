@@ -21,16 +21,16 @@ function submitEmail(){
 
         xhr.onreadystatechange = function(){
             if (this.readyState === XMLHttpRequest.DONE && this.status===200){
-                console.log("Message has been sent and received");
+                contactForm.elements['email'].disabled  = true;
+                contactForm.elements['name'].disabled   = true;
+                contactForm.elements['message'].disabled=true;
+                console.log("Message has been sent and received.");
             }
-            console.log(this.readyState);
         }
 
         xhr.send( JSON.stringify(emailOpts));
 
-        console.log("XHR sent");
-
-        console.log(serverURL);
+        console.log("Email Sent!");
 
         submitButton.className = 'primary disabled'
     }

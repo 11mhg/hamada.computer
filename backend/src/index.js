@@ -20,6 +20,7 @@ async function main(){
 
 
   app.get('/api/backend-alive', function(req, res){
+    console.log("ALIVE!");
     res.send('hello,world!\n');
   });
 
