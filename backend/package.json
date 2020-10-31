@@ -10,11 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tensorflow/tfjs-node": "^2.6.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "nodemailer": "^6.4.14",
     "nodemon": "^2.0.6",
-    "rotating-file-stream": "^2.1.3"
+    "npy-js": "git+https://github.com/Kings-Distributed-Systems/npy-js.git",
+    "rotating-file-stream": "^2.1.3",
+    "ws": "^7.3.1"
   }
 }

@@ -7,6 +7,8 @@ const transporter = nodemailer.createTransport(
   settings.mail
 );
 
+var queue = [];
+
 var defaultMailOptions = {
   from: 'hamada.computer.site@gmail.com',
   to: 'hamada.computer.site@gmail.com',
@@ -31,10 +33,18 @@ async function sendMail( mailOptions ){
 };
 
 
+setInterval(async function(){
+  if (queue.length > 0){
+    let item = queue.shift();
+    sendMail(item);
+  }
+}, 15*1000);
+
+
 
 
 router.post('/', async function(request, reply){
-  sendMail( request.body );
+  queue.push( request.body );
   reply.send(200);
 });
 

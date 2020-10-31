@@ -2,6 +2,7 @@ const settings   = require('./config.js').conf;
 const bodyParser = require('body-parser');
 const rfs        = require('rotating-file-stream');
 const express    = require('express');
+// const ws         = require('ws');
 const morgan     = require('morgan');
 
 // rotating write stream
@@ -20,12 +21,23 @@ async function main(){
 
 
   app.get('/api/backend-alive', function(req, res){
-    console.log("ALIVE!");
+    console.log("Heartbeat");
     res.send('hello,world!\n');
   });
 
 
   app.use('/api/mail', require('./routes/mail') );
+
+  // const wss = new ws.Server({'server': app});
+
+  // wss.on('connection', (ws)=>{
+  //   ws.on('message', (message)=>{
+  //     console.log("Received:", message);
+  //     ws.send(`Hello! you sent -> ${message}`);
+  //   })
+
+  //   ws.send('Hi there, I am a websocket server');
+  // })
 
 
   app.listen(settings.server.port, (err)=>{
