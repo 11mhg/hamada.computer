@@ -28,7 +28,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
-          name: hamada-site-http-svc
+          name: hamada-http-svc
         livenessProbe:
           httpGet:
             path: /
@@ -47,7 +47,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: hamada-site-http-svc
+      targetPort: hamada-http-svc
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
