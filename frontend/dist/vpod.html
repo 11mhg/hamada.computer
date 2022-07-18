@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>V-POD</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-B2XMLT9E22"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-B2XMLT9E22');
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Hamada.computer</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Video Predictive Object Detector</h1>
+							<span class="image fit">
+								<p align="center">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/4qllwf4uvRA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</p>
+							</span>
+							<h4>Abstract</h4>
+							<p>With the rise of video datasets and self-driving cars, many industries seek a way to perform quick object detection on video, as well as perform predictive tracking on these objects. We propose a predictive video object detector (POD net) integrating the YOLOv2 framework with the convolutional 2-dimensional (2D) Long Short Term Memory (LSTM) model proposed by Shi et al.. Our POD net performs object detection using YOLOv2 and object prediction using the LSTM model in an iterative manner with a view to improve object detection in video streams via object prediction. In this study we present two different approaches that we implemented to predict objects in subsequent video clips. The first approach, PODv1, applies a post-temporal pattern matching mechanism wherein the YOLOv2 detector is used to detect objects in multiple images and the LSTM layer is used to perform temporal feature mapping across the output tensors of the detectors. The second approach, PODv2, provides better results by applying the temporal feature mapping first across the images and then feeding the output into the YOLOv2 detector which is wrapped using a Time Distributed layer. We tested POD net on the MOT 2017 dataset and the network was able to perform predictive object detection and tracking, demonstrating that the LSTM layer is useful for a variety of video analysis problems.</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
